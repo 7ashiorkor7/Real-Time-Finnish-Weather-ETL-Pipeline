@@ -15,16 +15,6 @@ print(data)
 #Transforming the data
 from datetime import datetime
 
-data = {
-    'coord': {'lon': 24.9355, 'lat': 60.1695},
-    'weather': [{'id': 803, 'main': 'Clouds', 'description': 'broken clouds', 'icon': '04d'}],
-    'main': {'temp': 5.17, 'feels_like': 1.25, 'temp_min': 3.76, 'temp_max': 6.6, 'pressure': 1006, 'humidity': 86},
-    'wind': {'speed': 5.66, 'deg': 200},
-    'clouds': {'all': 75},
-    'sys': {'country': 'FI', 'sunrise': 1742875590, 'sunset': 1742921148},
-    'name': 'Helsinki'
-}
-
 # Convert Unix timestamps to human-readable datetime
 sunrise_time = datetime.utcfromtimestamp(data['sys']['sunrise']).strftime('%Y-%m-%d %H:%M:%S')
 sunset_time = datetime.utcfromtimestamp(data['sys']['sunset']).strftime('%Y-%m-%d %H:%M:%S')
